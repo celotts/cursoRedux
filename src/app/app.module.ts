@@ -12,11 +12,14 @@ import { TodoAddComponent } from './todo/todo-add/todo-add.component';
 
 // Form
 import { ReactiveFormsModule } from '@angular/forms';
+
+// Enviroment de la app
+import { environment } from '../environments/environment';
+
 // ngrx
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { todoReducer } from './todo/todo.reducer';
-import { environment } from '../environments/environment';
+import { AppReducers } from './app.redurcers';
 
 
 @NgModule({
@@ -33,7 +36,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({ todos: todoReducer }),
+    StoreModule.forRoot(AppReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 10
     }),
