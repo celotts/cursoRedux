@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppReducers } from './app.redurcers';
+import { FilterPipe } from './filter/filter.pipe';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AppReducers } from './app.redurcers';
     TodosListComponent,
     TodoItemComponent,
     TodoFooterComponent,
-    TodoAddComponent
+    TodoAddComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
