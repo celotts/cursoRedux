@@ -39,9 +39,6 @@ import { FilterPipe } from './filter/filter.pipe';
     AppRoutingModule,
     ReactiveFormsModule,
     StoreModule.forRoot(AppReducers),
-    StoreDevtoolsModule.instrument({
-      maxAge: 10
-    }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
 
   ],
